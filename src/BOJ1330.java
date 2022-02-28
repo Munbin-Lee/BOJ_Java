@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ1001 {
+public class BOJ1330 {
 
     public static void main(String[] args) throws IOException {
 
@@ -13,7 +13,7 @@ public class BOJ1001 {
         int num1 = Integer.parseInt(st.nextToken());
         int num2 = Integer.parseInt(st.nextToken());
 
-        System.out.println(num1 - num2);
+        System.out.println(num1 > num2 ? ">" : num1 < num2 ? "<" : "==");
 
     }
 }

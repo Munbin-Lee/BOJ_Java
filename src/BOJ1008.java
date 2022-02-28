@@ -14,5 +14,6 @@ public class BOJ1008 {
         int num2 = Integer.parseInt(st.nextToken());
 
         System.out.println((double) num1 / num2);
+
     }
 }

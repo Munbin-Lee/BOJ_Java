@@ -28,5 +28,6 @@ public class BOJ1157 {
         }
 
         System.out.println(multi ? "?" : (char) (most + 65));
+
     }
 }
