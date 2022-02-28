@@ -22,6 +22,5 @@ public class BOJ1152 {
         }
 
         System.out.println(count);
-
     }
 }
