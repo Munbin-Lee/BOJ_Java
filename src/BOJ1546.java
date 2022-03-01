@@ -8,15 +8,12 @@ public class BOJ1546 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int num = Integer.parseInt(br.readLine());
         int[] score = new int[num];
-
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-
         double max = 0;
         double total = 0;
 
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < num; i++) {
             score[i] = Integer.parseInt(st.nextToken());
             if (score[i] > max) {

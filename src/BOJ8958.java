@@ -7,7 +7,6 @@ public class BOJ8958 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int num = Integer.parseInt(br.readLine()); //케이스 개수
         String str;
         int cnt;

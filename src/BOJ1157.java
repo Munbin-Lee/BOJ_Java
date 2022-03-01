@@ -8,10 +8,8 @@ public class BOJ1157 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
-
         int[] arr = new int[26];
-        int max = 0;
-        int most = 0;
+        int max = 0, most = 0;
         boolean multi = false;
 
         for (int i = 0; i < str.length(); i++) {
