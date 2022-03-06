@@ -12,14 +12,14 @@ public class BOJ1978 {
         //1000이하의 소수 구하기
         //https://www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java 변형
         int primeMax = 1000;
-        boolean[] isPrime = new boolean[primeMax + 1];
+        boolean[] primeArr = new boolean[primeMax + 1];
         for (int i = 2; i <= primeMax; i++) {
-            isPrime[i] = true;
+            primeArr[i] = true;
         }
         for (int i = 2; (i * i) <= primeMax; i++) {
-            if (isPrime[i]) {
+            if (primeArr[i]) {
                 for (int j = (i * i); j <= primeMax; j += i) {
-                    isPrime[j] = false;
+                    primeArr[j] = false;
                 }
             }
         }
@@ -31,7 +31,7 @@ public class BOJ1978 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         while (N-- > 0) {
             int num = Integer.parseInt(st.nextToken());
-            if (isPrime[num]) {
+            if (primeArr[num]) {
                 cnt++;
             }
         }

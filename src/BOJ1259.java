@@ -15,7 +15,7 @@ public class BOJ1259 {
             if (num == 0) {
                 break;
             }
-            int[] arr = Integer.toString(num).chars().map(c -> c - '0').toArray(); //숫자를 배열화
+            int[] arr = Integer.toString(num).chars().map(c -> c - '0').toArray(); //숫자를 배열화, https://stackoverflow.com/questions/8033550/convert-an-integer-to-an-array-of-digits
 
             for (int i = 0; i < arr.length / 2; i++) {
                 if (arr[i] != arr[arr.length - 1 - i]) {
