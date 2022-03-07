@@ -1,4 +1,4 @@
-//WAP제출용
+//WAP 제출용
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -9,8 +9,8 @@ public class BOJ4153 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
         int num1, num2, num3, max, mid, min;
+        StringTokenizer st;
 
         while (true) {
             st = new StringTokenizer(br.readLine(), " ");
