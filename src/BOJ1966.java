@@ -9,7 +9,7 @@ public class BOJ1966 {
 
     public static ArrayList<Integer> list;
 
-    public static boolean DoesGreaterOneExists(int num) {
+    public static boolean DoesGreaterOneExist(int num) {
         for (int i = 1; i < list.size(); i++) {
             if (Math.abs(list.get(i)) > num) return true;
         }
@@ -33,7 +33,7 @@ public class BOJ1966 {
             list.set(M, -list.get(M)); //구분을 위해 음수처리
             int cnt = 1; //출력횟수
             while (true) {
-                if (DoesGreaterOneExists(Math.abs(list.get(0)))) {
+                if (DoesGreaterOneExist(Math.abs(list.get(0)))) {
                     list.add(list.get(0));
                     list.remove(0);
                 } else if (list.get(0) < 0) { //특정 문서 출력
