@@ -5,23 +5,13 @@ import java.io.InputStreamReader;
 public class BOJ1152 {
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
-
-        int count = 1;
-
-        for (int i = 1; i < str.length() - 1; i++) {
-            if (str.charAt(i) == ' ') {
-                count++;
-            }
+        int cnt = 1;
+        if (str.equals(" ")) cnt = 0;
+        else for (int i = 1; i < str.length() - 1; i++) {
+            if (str.charAt(i) == ' ') cnt++;
         }
-
-        if (str.equals(" ")) {
-            count = 0;
-        }
-
-        System.out.println(count);
-
+        System.out.println(cnt);
     }
 }

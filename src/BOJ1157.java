@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 public class BOJ1157 {
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         int[] arr = new int[26];
@@ -16,7 +15,6 @@ public class BOJ1157 {
         for (int i = 0; i < str.length(); i++) {
             arr[(str.charAt(i) > 90) ? str.charAt(i) - 97 : str.charAt(i) - 65]++;
         }
-
         for (int i = 0; i < 26; i++) {
             if (arr[i] > max) {
                 max = arr[i];
@@ -26,6 +24,5 @@ public class BOJ1157 {
         }
 
         System.out.println(multi ? "?" : (char) (most + 65));
-
     }
 }

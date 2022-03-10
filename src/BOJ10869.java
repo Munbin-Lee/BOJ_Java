@@ -19,6 +19,5 @@ public class BOJ10869 {
         System.out.println(A * B);
         System.out.println(A / B);
         System.out.println(A % B);
-
     }
 }

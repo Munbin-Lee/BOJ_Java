@@ -12,6 +12,5 @@ public class BOJ8393 {
         int N = Integer.parseInt(br.readLine());
 
         System.out.println((N + 1) * N / 2);
-
     }
 }
