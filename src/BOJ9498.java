@@ -28,6 +28,5 @@ public class BOJ9498 {
                 grade = 'F';
         }
         System.out.println(grade);
-
     }
 }

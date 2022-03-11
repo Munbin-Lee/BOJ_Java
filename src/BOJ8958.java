@@ -20,9 +20,7 @@ public class BOJ8958 {
                 if (str.charAt(j) == 'O') {
                     cnt++;
                     score += cnt;
-                } else if (str.charAt(j) == 'X') {
-                    cnt = 0;
-                }
+                } else if (str.charAt(j) == 'X') cnt = 0;
             }
             System.out.println(score);
         }

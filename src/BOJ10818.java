@@ -20,6 +20,5 @@ public class BOJ10818 {
             if (num < min) min = num;
         }
         System.out.println(min + " " + max);
-
     }
 }

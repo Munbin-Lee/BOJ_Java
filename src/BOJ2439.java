@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 public class BOJ2439 {
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
 

@@ -22,6 +22,5 @@ public class BOJ10809 {
         }
         bw.flush();
         bw.close();
-
     }
 }

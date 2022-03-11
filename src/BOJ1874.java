@@ -34,5 +34,4 @@ public class BOJ1874 {
         }
         System.out.println(sb);
     }
-
 }

@@ -23,7 +23,6 @@ public class BOJ9012 {
                     break;
                 }
             }
-
             if (VPS && cnt == 0) bw.write("YES\n");
             else bw.write("NO\n");
         }

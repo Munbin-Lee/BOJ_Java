@@ -22,7 +22,6 @@ public class BOJ1157 {
                 multi = false;
             } else if (arr[i] == max) multi = true;
         }
-
         System.out.println(multi ? "?" : (char) (most + 65));
     }
 }

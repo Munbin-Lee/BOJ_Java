@@ -25,6 +25,5 @@ public class BOJ10871 {
         }
         bw.flush();
         bw.close();
-
     }
 }

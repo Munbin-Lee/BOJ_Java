@@ -58,5 +58,4 @@ public class BOJ10866 {
         }
         System.out.println(sb);
     }
-
 }

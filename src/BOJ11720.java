@@ -17,6 +17,5 @@ public class BOJ11720 {
             num = num.divide(BigInteger.valueOf(10));
         }
         System.out.println(sum);
-
     }
 }

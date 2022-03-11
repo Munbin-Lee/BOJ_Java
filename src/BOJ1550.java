@@ -9,5 +9,4 @@ public class BOJ1550 {
         int num = Integer.parseInt(br.readLine(), 16);
         System.out.println(num);
     }
-
 }

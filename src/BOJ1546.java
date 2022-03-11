@@ -24,8 +24,6 @@ public class BOJ1546 {
         for (int i = 0; i < num; i++) {
             total += (score[i] / max * 100);
         }
-
         System.out.println(total / num);
-
     }
 }

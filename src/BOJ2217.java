@@ -23,6 +23,5 @@ public class BOJ2217 {
             maxWeight = Math.max(maxWeight, arr[N - 1 - i] * (i + 1));
         }
         System.out.println(maxWeight);
-
     }
 }

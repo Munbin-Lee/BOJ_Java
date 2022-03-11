@@ -10,6 +10,7 @@ public class BOJ10430 {
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
         int C = Integer.parseInt(st.nextToken());
+
         System.out.println((A + B) % C);
         System.out.println(((A % C) + (B % C)) % C);
         System.out.println((A * B) % C);

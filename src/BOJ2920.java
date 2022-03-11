@@ -18,13 +18,8 @@ public class BOJ2920 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        if (Arrays.equals(arr, arrAscend)) {
-            System.out.println("ascending");
-        } else if (Arrays.equals(arr, arrDescend)) {
-            System.out.println("descending");
-        } else {
-            System.out.println("mixed");
-        }
-
+        if (Arrays.equals(arr, arrAscend)) System.out.println("ascending");
+        else if (Arrays.equals(arr, arrDescend)) System.out.println("descending");
+        else System.out.println("mixed");
     }
 }

@@ -27,18 +27,13 @@ public class BOJ1929 {
         }
 
         //2는 수동으로 체크
-        if (M < 3) {
-            bw.write(2 + "\n");
-        }
+        if (M < 3) bw.write(2 + "\n");
 
         //M이상 N이하 홀수 중 소수 체크
         for (int i = oddMoreThanM; i <= N; i += 2) {
-            if (isPrime[i]) {
-                bw.write(i + "\n");
-            }
+            if (isPrime[i]) bw.write(i + "\n");
         }
         bw.flush();
         bw.close();
-
     }
 }

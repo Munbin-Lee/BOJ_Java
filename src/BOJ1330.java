@@ -13,8 +13,8 @@ public class BOJ1330 {
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
+        
         String result = (A > B) ? ">" : (A < B) ? "<" : "==";
-
         System.out.println(result);
     }
 }

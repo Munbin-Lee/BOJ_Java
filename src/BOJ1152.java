@@ -7,6 +7,7 @@ public class BOJ1152 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
+
         int cnt = 1;
         if (str.equals(" ")) cnt = 0;
         else for (int i = 1; i < str.length() - 1; i++) {

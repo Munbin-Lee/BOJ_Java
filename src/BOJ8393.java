@@ -11,6 +11,7 @@ public class BOJ8393 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-        System.out.println((N + 1) * N / 2);
+        int result = (N + 1) * N / 2;
+        System.out.println(result);
     }
 }
