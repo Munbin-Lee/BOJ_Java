@@ -9,9 +9,13 @@ public class BOJ1152 {
         String str = br.readLine();
 
         int cnt = 1;
-        if (str.equals(" ")) cnt = 0;
-        else for (int i = 1; i < str.length() - 1; i++) {
-            if (str.charAt(i) == ' ') cnt++;
+        if (str.equals(" ")) {
+            cnt = 0;
+        }
+        for (int i = 1; i < str.length() - 1; i++) {
+            if (str.charAt(i) == ' ') {
+                cnt++;
+            }
         }
         System.out.println(cnt);
     }

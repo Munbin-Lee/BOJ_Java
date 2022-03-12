@@ -16,15 +16,21 @@ public class BOJ9012 {
             String str = br.readLine();
 
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == '(') cnt++;
-                else cnt--;
+                if (str.charAt(i) == '(') {
+                    cnt++;
+                } else {
+                    cnt--;
+                }
                 if (cnt < 0) {
                     VPS = false;
                     break;
                 }
             }
-            if (VPS && cnt == 0) bw.write("YES\n");
-            else bw.write("NO\n");
+            if (VPS && cnt == 0) {
+                bw.write("YES\n");
+            } else {
+                bw.write("NO\n");
+            }
         }
         bw.flush();
         bw.close();
