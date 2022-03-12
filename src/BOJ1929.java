@@ -31,7 +31,9 @@ public class BOJ1929 {
 
         //M이상 N이하 홀수 중 소수 체크
         for (int i = oddMoreThanM; i <= N; i += 2) {
-            if (isPrime[i]) bw.write(i + "\n");
+            if (isPrime[i]) {
+                bw.write(i + "\n");
+            }
         }
         bw.flush();
         bw.close();

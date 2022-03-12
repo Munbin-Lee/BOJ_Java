@@ -19,13 +19,19 @@ public class BOJ10866 {
                 break;
             }
             case "pop_front": {
-                if (deque.isEmpty()) sb.append("-1\n");
-                else sb.append(deque.pollFirst()).append("\n");
+                if (deque.isEmpty()) {
+                    sb.append("-1\n");
+                } else {
+                    sb.append(deque.pollFirst()).append("\n");
+                }
                 break;
             }
             case "pop_back": {
-                if (deque.isEmpty()) sb.append("-1\n");
-                else sb.append(deque.pollLast()).append("\n");
+                if (deque.isEmpty()) {
+                    sb.append("-1\n");
+                } else {
+                    sb.append(deque.pollLast()).append("\n");
+                }
                 break;
             }
             case "size": {
@@ -38,13 +44,19 @@ public class BOJ10866 {
                 break;
             }
             case "front": {
-                if (deque.isEmpty()) sb.append("-1\n");
-                else sb.append(deque.peekFirst()).append("\n");
+                if (deque.isEmpty()) {
+                    sb.append("-1\n");
+                } else {
+                    sb.append(deque.peekFirst()).append("\n");
+                }
                 break;
             }
             case "back": {
-                if (deque.isEmpty()) sb.append("-1\n");
-                else sb.append(deque.peekLast()).append("\n");
+                if (deque.isEmpty()) {
+                    sb.append("-1\n");
+                } else {
+                    sb.append(deque.peekLast()).append("\n");
+                }
                 break;
             }
         }

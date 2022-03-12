@@ -12,8 +12,11 @@ public class BOJ10773 {
         int K = Integer.parseInt(br.readLine());
         while (K-- > 0) {
             int num = Integer.parseInt(br.readLine());
-            if (num == 0) stack.pop();
-            else stack.add(num);
+            if (num == 0) {
+                stack.pop();
+            } else {
+                stack.add(num);
+            }
         }
         while (!stack.isEmpty()) sum += stack.pop();
         System.out.println(sum);

@@ -15,14 +15,22 @@ public class BOJ1520 {
     private static final int[] dx = {0, 0, 1, -1};
 
     public static int getNumOfDirections(int y, int x) {
-        if (y == M - 1 && x == N - 1) return 1; //도착
-        if (numOfDirections[y][x] != -1) return numOfDirections[y][x];
+        if (y == M - 1 && x == N - 1) {
+            return 1; //도착
+        }
+        if (numOfDirections[y][x] != -1) {
+            return numOfDirections[y][x];
+        }
         numOfDirections[y][x] = 0;
 
         for (int i = 0; i < 4; i++) {
             int _y = y + dy[i], _x = x + dx[i];
-            if (_y >= M || _y < 0 || _x >= N || _x < 0) continue;
-            if (map[_y][_x] < map[y][x]) numOfDirections[y][x] += getNumOfDirections(_y, _x);
+            if (_y >= M || _y < 0 || _x >= N || _x < 0) {
+                continue;
+            }
+            if (map[_y][_x] < map[y][x]) {
+                numOfDirections[y][x] += getNumOfDirections(_y, _x);
+            }
         }
         return numOfDirections[y][x];
     }
