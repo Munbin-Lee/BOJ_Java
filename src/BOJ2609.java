@@ -8,9 +8,7 @@ public class BOJ2609 {
     //extended Euclidean Algorithm
     //https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
     public static int gcd(int a, int b) {
-        if (a == 0) {
-            return b;
-        }
+        if (a == 0) return b;
         return gcd(b % a, a);
     }
 

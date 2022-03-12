@@ -16,11 +16,8 @@ public class BOJ11650 {
         }
         //이중배열 오름차순
         Arrays.sort(arr, (o1, o2) -> {
-            if (o1[0] == o2[0]) {
-                return o1[1] - o2[1];
-            } else {
-                return o1[0] - o2[0];
-            }
+            if (o1[0] == o2[0]) return o1[1] - o2[1];
+            else return o1[0] - o2[0];
         });
 
         for (int i = 0; i < N; i++) bw.write(arr[i][0] + " " + arr[i][1] + "\n");

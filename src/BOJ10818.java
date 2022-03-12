@@ -16,12 +16,8 @@ public class BOJ10818 {
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         for (int i = 0; i < N; i++) {
             num = Integer.parseInt(st.nextToken());
-            if (num > max) {
-                max = num;
-            }
-            if (num < min) {
-                min = num;
-            }
+            if (num > max) max = num;
+            if (num < min) min = num;
         }
         System.out.println(min + " " + max);
     }

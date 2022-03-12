@@ -11,9 +11,7 @@ public class BOJ1259 {
         while (true) {
             isPalindrome = true;
             num = Integer.parseInt(br.readLine());
-            if (num == 0) {
-                break;
-            }
+            if (num == 0) break;
             int[] arr = Integer.toString(num).chars().map(c -> c - '0').toArray(); //숫자를 배열화, https://stackoverflow.com/questions/8033550/convert-an-integer-to-an-array-of-digits
 
             for (int i = 0; i < arr.length / 2; i++) {
@@ -23,9 +21,7 @@ public class BOJ1259 {
                     break;
                 }
             }
-            if (isPalindrome) {
-                bw.write("yes\n");
-            }
+            if (isPalindrome) bw.write("yes\n");
         }
         bw.flush();
         bw.close();

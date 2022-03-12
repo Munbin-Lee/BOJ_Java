@@ -8,13 +8,9 @@ public class BOJ9012_2 {
     public static boolean isVPS(String str) {
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
-            if (stack.empty() && str.charAt(i) == ')') {
-                return false;
-            } else if (str.charAt(i) == '(') {
-                stack.push(0);
-            } else {
-                stack.pop();
-            }
+            if (stack.empty() && str.charAt(i) == ')') return false;
+            else if (str.charAt(i) == '(') stack.push(0);
+            else stack.pop();
         }
         return stack.empty();
     }

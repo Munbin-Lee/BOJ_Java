@@ -11,9 +11,7 @@ public class BOJ1966 {
 
     public static boolean DoesGreaterOneExist(int num) {
         for (int i = 1; i < list.size(); i++) {
-            if (Math.abs(list.get(i)) > num) {
-                return true;
-            }
+            if (Math.abs(list.get(i)) > num) return true;
         }
         return false;
     }

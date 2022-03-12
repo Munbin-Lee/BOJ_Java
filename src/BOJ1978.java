@@ -31,9 +31,7 @@ public class BOJ1978 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         while (N-- > 0) {
             int num = Integer.parseInt(st.nextToken());
-            if (primeArr[num]) {
-                cnt++;
-            }
+            if (primeArr[num]) cnt++;
         }
         System.out.println(cnt);
     }

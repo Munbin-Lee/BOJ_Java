@@ -14,9 +14,7 @@ public class BOJ10809 {
         }
 
         for (int i = 0; i < S.length(); i++) {
-            if (arr[S.charAt(i) - 97] == -1) {
-                arr[S.charAt(i) - 97] = i;
-            }
+            if (arr[S.charAt(i) - 97] == -1) arr[S.charAt(i) - 97] = i;
         }
 
         for (int i = 0; i < 26; i++) {
