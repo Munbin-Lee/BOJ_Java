@@ -28,8 +28,8 @@ public class BOJ18111 {
                 }
             }
         }
-        if (numOfBlocks < 0) {
-            time = Integer.MAX_VALUE;
+        if (numOfBlocks < 0) { //불가능
+            return Integer.MAX_VALUE;
         }
         return time;
     }
