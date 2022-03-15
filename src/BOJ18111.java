@@ -1,5 +1,3 @@
-//다시풀기
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,7 +58,7 @@ public class BOJ18111 {
         int level = 0;
         for (int i = min; i <= max; i++) {
             int time = getTimeFlattening(i);
-            if (time < minTime) {
+            if (time <= minTime) {
                 minTime = time;
                 level = i;
             }
