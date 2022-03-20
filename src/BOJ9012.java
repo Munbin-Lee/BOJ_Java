@@ -1,5 +1,3 @@
-//WAP 제출용
-
 import java.io.*;
 
 public class BOJ9012 {

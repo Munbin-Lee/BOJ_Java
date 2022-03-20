@@ -1,4 +1,3 @@
-//WAP 제출용
 //Special Thanks to Taeho!
 
 import java.io.BufferedReader;
