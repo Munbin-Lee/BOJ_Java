@@ -22,5 +22,4 @@ public class BOJ10773 {
         while (!stack.isEmpty()) sum += stack.pop();
         System.out.println(sum);
     }
-
 }

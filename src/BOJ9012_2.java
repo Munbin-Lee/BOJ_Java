@@ -11,7 +11,7 @@ public class BOJ9012_2 {
             if (stack.empty() && str.charAt(i) == ')') {
                 return false;
             }
-            if (str.charAt(i) == '(') {
+            else if (str.charAt(i) == '(') {
                 stack.push(0);
             }
             else {
