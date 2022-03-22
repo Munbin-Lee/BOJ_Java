@@ -12,11 +12,14 @@ public class BOJ14681 {
 
         if (x > 0 && y > 0) {
             result = 1;
-        } else if (x < 0 && y > 0) {
+        }
+        else if (x < 0 && y > 0) {
             result = 2;
-        } else if (x < 0 && y < 0) {
+        }
+        else if (x < 0 && y < 0) {
             result = 3;
-        } else if (x > 0 && y < 0) {
+        }
+        else if (x > 0 && y < 0) {
             result = 4;
         }
         System.out.println(result);

@@ -20,7 +20,8 @@ public class BOJ1157 {
                 max = arr[i];
                 most = i;
                 multi = false;
-            } else if (arr[i] == max) {
+            }
+            else if (arr[i] == max) {
                 multi = true;
             }
         }

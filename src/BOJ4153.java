@@ -23,7 +23,8 @@ public class BOJ4153 {
 
             if (min * min + mid * mid == max * max) {
                 bw.write("right\n"); //피타고라스
-            } else {
+            }
+            else {
                 bw.write("wrong\n");
             }
         }

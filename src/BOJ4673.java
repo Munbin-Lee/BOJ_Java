@@ -24,7 +24,8 @@ public class BOJ4673 {
             int num = sumNumAndDigits(i);
             if (num <= 10000) {
                 setNotSelfNumber.add(num);
-            } else {
+            }
+            else {
                 break;
             }
         }
@@ -35,7 +36,8 @@ public class BOJ4673 {
         for (int i = 1; i <= 9993; i++) {
             if (i != num) {
                 bw.write(i + "\n");
-            } else if (itr.hasNext()) {
+            }
+            else if (itr.hasNext()) {
                 num = itr.next();
             }
         }

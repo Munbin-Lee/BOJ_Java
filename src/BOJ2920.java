@@ -21,9 +21,11 @@ public class BOJ2920 {
         String result;
         if (Arrays.equals(arr, arrAscend)) {
             result = "ascending";
-        } else if (Arrays.equals(arr, arrDescend)) {
+        }
+        else if (Arrays.equals(arr, arrDescend)) {
             result = "descending";
-        } else {
+        }
+        else {
             result = "mixed";
         }
         System.out.println(result);

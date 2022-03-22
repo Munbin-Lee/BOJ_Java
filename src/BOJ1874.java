@@ -17,7 +17,8 @@ public class BOJ1874 {
             stack.pop();
             sb.append("-\n");
             return sb.toString();
-        } else {
+        }
+        else {
             System.out.println("NO");
             System.exit(0);
             return "0"; //의미없음

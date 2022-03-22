@@ -32,7 +32,8 @@ public class BOJ2805 {
             int mid = (min + max) / 2;
             if (cutTree(arr, mid) < M) {
                 max = mid;
-            } else {
+            }
+            else {
                 min = mid + 1;
             }
         }

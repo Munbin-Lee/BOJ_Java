@@ -16,7 +16,8 @@ public class BOJ9012 {
             for (int i = 0; i < str.length(); i++) {
                 if (str.charAt(i) == '(') {
                     cnt++;
-                } else {
+                }
+                else {
                     cnt--;
                 }
                 if (cnt < 0) {
@@ -26,7 +27,8 @@ public class BOJ9012 {
             }
             if (VPS && cnt == 0) {
                 bw.write("YES\n");
-            } else {
+            }
+            else {
                 bw.write("NO\n");
             }
         }

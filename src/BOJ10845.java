@@ -21,7 +21,8 @@ public class BOJ10845 {
                 case "pop": {
                     if (queue.isEmpty()) {
                         bw.write(-1 + "\n");
-                    } else {
+                    }
+                    else {
                         bw.write(queue.removeFirst() + "\n");
                     }
                     break;
@@ -37,7 +38,8 @@ public class BOJ10845 {
                 case "front": {
                     if (queue.isEmpty()) {
                         bw.write(-1 + "\n");
-                    } else {
+                    }
+                    else {
                         bw.write(queue.getFirst() + "\n");
                     }
                     break;
@@ -45,7 +47,8 @@ public class BOJ10845 {
                 case "back": {
                     if (queue.isEmpty()) {
                         bw.write(-1 + "\n");
-                    } else {
+                    }
+                    else {
                         bw.write(queue.getLast() + "\n");
                     }
                     break;

@@ -15,11 +15,14 @@ public class BOJ2480 {
         int result;
         if ((num1 == num2) && (num2 == num3)) {
             result = 10000 + num1 * 1000;
-        } else if (num1 == num2 || num1 == num3) {
+        }
+        else if (num1 == num2 || num1 == num3) {
             result = 1000 + num1 * 100;
-        } else if (num2 == num3) {
+        }
+        else if (num2 == num3) {
             result = 1000 + num2 * 100;
-        } else {
+        }
+        else {
             result = Math.max(num1, Math.max(num2, num3)) * 100;
         }
         System.out.println(result);

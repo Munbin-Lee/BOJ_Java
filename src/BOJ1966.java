@@ -38,9 +38,11 @@ public class BOJ1966 {
                 if (DoesGreaterOneExist(Math.abs(list.get(0)))) {
                     list.add(list.get(0));
                     list.remove(0);
-                } else if (list.get(0) < 0) { //특정 문서 출력
+                }
+                else if (list.get(0) < 0) { //특정 문서 출력
                     break;
-                } else { //가장 큰 경우
+                }
+                else { //가장 큰 경우
                     list.remove(0);
                     cnt++;
                 }

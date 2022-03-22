@@ -30,7 +30,8 @@ public class BOJ1654 {
             }
             if (sum < N) {
                 max = mid;
-            } else {
+            }
+            else {
                 min = mid + 1;
             }
         }

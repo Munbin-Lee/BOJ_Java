@@ -21,7 +21,8 @@ public class BOJ10866 {
             case "pop_front": {
                 if (deque.isEmpty()) {
                     sb.append("-1\n");
-                } else {
+                }
+                else {
                     sb.append(deque.pollFirst()).append("\n");
                 }
                 break;
@@ -29,7 +30,8 @@ public class BOJ10866 {
             case "pop_back": {
                 if (deque.isEmpty()) {
                     sb.append("-1\n");
-                } else {
+                }
+                else {
                     sb.append(deque.pollLast()).append("\n");
                 }
                 break;
@@ -46,7 +48,8 @@ public class BOJ10866 {
             case "front": {
                 if (deque.isEmpty()) {
                     sb.append("-1\n");
-                } else {
+                }
+                else {
                     sb.append(deque.peekFirst()).append("\n");
                 }
                 break;
@@ -54,7 +57,8 @@ public class BOJ10866 {
             case "back": {
                 if (deque.isEmpty()) {
                     sb.append("-1\n");
-                } else {
+                }
+                else {
                     sb.append(deque.peekLast()).append("\n");
                 }
                 break;

@@ -14,7 +14,8 @@ public class BOJ10773 {
             int num = Integer.parseInt(br.readLine());
             if (num == 0) {
                 stack.pop();
-            } else {
+            }
+            else {
                 stack.add(num);
             }
         }

@@ -10,9 +10,11 @@ public class BOJ9012_2 {
         for (int i = 0; i < str.length(); i++) {
             if (stack.empty() && str.charAt(i) == ')') {
                 return false;
-            } else if (str.charAt(i) == '(') {
+            }
+            if (str.charAt(i) == '(') {
                 stack.push(0);
-            } else {
+            }
+            else {
                 stack.pop();
             }
         }

@@ -20,7 +20,8 @@ public class BOJ11050 {
         int result;
         if ((K == 0) || (K == N)) {
             result = 1;
-        } else {
+        }
+        else {
             result = factorial(N) / factorial(K) / factorial(N - K);
         }
         System.out.println(result);

@@ -21,7 +21,8 @@ public class BOJ10828 {
                 case "pop": {
                     if (stack.isEmpty()) {
                         bw.write(-1 + "\n");
-                    } else {
+                    }
+                    else {
                         bw.write(stack.pop() + "\n");
                     }
                     break;
@@ -37,7 +38,8 @@ public class BOJ10828 {
                 case "top": {
                     if (stack.isEmpty()) {
                         bw.write(-1 + "\n");
-                    } else {
+                    }
+                    else {
                         bw.write(stack.peek() + "\n");
                     }
                     break;
