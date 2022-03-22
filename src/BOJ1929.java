@@ -12,7 +12,7 @@ public class BOJ1929 {
         int N = Integer.parseInt(st.nextToken());
         int oddMoreThanM = (M % 2 == 0) ? M + 1 : M;
 
-        //N이하의 소수 구하기
+        //N 이하의 소수 구하기
         //https://www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java 변형
         boolean[] isPrime = new boolean[N + 1];
         for (int i = 2; i <= N; i++) {

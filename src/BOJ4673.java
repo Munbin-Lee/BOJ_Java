@@ -30,13 +30,13 @@ public class BOJ4673 {
         }
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        Iterator<Integer> iter = setNotSelfNumber.iterator();
-        int num = iter.next();
+        Iterator<Integer> itr = setNotSelfNumber.iterator();
+        int num = itr.next();
         for (int i = 1; i <= 9993; i++) {
             if (i != num) {
                 bw.write(i + "\n");
-            } else if (iter.hasNext()) {
-                num = iter.next();
+            } else if (itr.hasNext()) {
+                num = itr.next();
             }
         }
         bw.flush();

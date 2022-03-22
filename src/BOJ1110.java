@@ -6,8 +6,7 @@ public class BOJ1110 {
 
     public static int makeNewNum(int num) {
         int sum = num / 10 + num % 10;
-        int result = num % 10 * 10 + sum % 10;
-        return result;
+        return num % 10 * 10 + sum % 10;
     }
 
     public static void main(String[] args) throws IOException {

@@ -5,8 +5,8 @@ import java.util.StringTokenizer;
 public class BOJ11651 {
 
     public static class Point {
-        public int x;
-        public int y;
+        public final int x;
+        public final int y;
 
         public Point(int x, int y) {
             this.x = x;

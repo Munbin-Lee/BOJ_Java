@@ -6,8 +6,8 @@ import java.util.StringTokenizer;
 public class BOJ10814 {
 
     public static class Member {
-        int age;
-        String name;
+        final int age;
+        final String name;
 
         public Member(int age, String name) {
             this.age = age;

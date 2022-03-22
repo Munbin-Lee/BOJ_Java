@@ -10,6 +10,7 @@ public class BOJ10250 {
         while (T-- > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int H = Integer.parseInt(st.nextToken());
+            @SuppressWarnings("unused")
             int W = Integer.parseInt(st.nextToken()); //존재 이유 불명
             int N = Integer.parseInt(st.nextToken());
             int floor = (N % H == 0) ? H : N % H;
