@@ -12,6 +12,7 @@ public class BOJ1152 {
         if (str.equals(" ")) {
             cnt = 0;
         }
+
         for (int i = 1; i < str.length() - 1; i++) {
             if (str.charAt(i) == ' ') {
                 cnt++;
