@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 public class BOJ1065 {
 
     public static void main(String[] args) throws IOException {
-
         //1000이하의 한수 구하기
         int maxHansoo = 1000;
         boolean[] hansooArr = new boolean[maxHansoo + 1];

@@ -6,7 +6,6 @@ import java.util.StringTokenizer;
 public class BOJ1546 {
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
         int[] score = new int[num];

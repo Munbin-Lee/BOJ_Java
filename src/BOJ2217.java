@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class BOJ2217 {
 
     public static void main(String[] args) throws IOException {
-
         int maxWeight = 0; //최대 중량
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());

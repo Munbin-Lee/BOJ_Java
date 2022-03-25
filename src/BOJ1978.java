@@ -6,7 +6,6 @@ import java.util.StringTokenizer;
 public class BOJ1978 {
 
     public static void main(String[] args) throws IOException {
-
         //1000이하의 소수 구하기
         //https://www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java 변형
         int primeMax = 1000;
