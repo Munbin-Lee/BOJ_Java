@@ -23,21 +23,23 @@ public class BOJ1012 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         int T = Integer.parseInt(br.readLine());
         while (T-- > 0) {
-
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             M = Integer.parseInt(st.nextToken());
             N = Integer.parseInt(st.nextToken());
             int K = Integer.parseInt(st.nextToken());
             map = new boolean[M][N];
             check = new boolean[M][N];
+
             while (K-- > 0) {
                 st = new StringTokenizer(br.readLine(), " ");
                 int num1 = Integer.parseInt(st.nextToken());
                 int num2 = Integer.parseInt(st.nextToken());
                 map[num1][num2] = true;
             }
+
             int cnt = 0;
             for (int i = 0; i < M; i++) {
                 for (int j = 0; j < N; j++) {
