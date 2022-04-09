@@ -12,6 +12,10 @@ public class BOJ1463 {
         int cnt = 0;
 
         while (N != 1) {
+            while (N % 4 == 0) {
+                N /= 4;
+                cnt += 2;
+            }
             if (N % 3 == 1) {
                 N--;
                 cnt++;
@@ -30,10 +34,6 @@ public class BOJ1463 {
             while (N % 2 == 0) {
                 N /= 2;
                 cnt++;
-            }
-            if (N == 5) {
-                cnt += 3;
-                break;
             }
         }
         System.out.println(cnt);
