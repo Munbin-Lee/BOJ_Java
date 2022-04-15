@@ -1,8 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
+import java.util.*;
 
 public class BOJ18870 {
 
@@ -18,9 +15,9 @@ public class BOJ18870 {
             arr[i] = num;
             set.add(num);
         }
-        List<Integer> list = new ArrayList<>(set);
+        Integer[] setToArr = set.toArray(Integer[]::new);
         for (int i : arr) {
-            bw.write(list.indexOf(i)+" ");
+            bw.write(Arrays.binarySearch(setToArr, i) + " ");
         }
         bw.flush();
         bw.close();
