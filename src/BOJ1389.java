@@ -11,22 +11,30 @@ public class BOJ1389 {
     public static boolean[] visited;
     public static int[][] distance;
 
+    static class Info {
+        public int index;
+        public int dist;
+
+        public Info(int index, int dist) {
+            this.index = index;
+            this.dist = dist;
+        }
+    }
+
     public static void BFS(int start) {
         visited[start] = true;
-        Deque<Integer> deque = new LinkedList<>();
-        Deque<Integer> cntDeque = new LinkedList<>();
-        deque.add(start);
-        cntDeque.add(0);
+        Deque<Info> deque = new LinkedList<>();
+        deque.add(new Info(start, 0));
         while (!deque.isEmpty()) {
-            int i = deque.removeFirst();
-            int cnt = cntDeque.removeFirst();
+            Info temp = deque.removeFirst();
+            int i = temp.index;
+            int dist = temp.dist;
             for (int j = 1; j < visited.length; j++) {
                 if (path[i][j] && !visited[j]) {
-                    cnt++;
+                    dist++;
                     visited[j] = true;
-                    distance[start][j] = cnt;
-                    deque.addLast(j);
-                    cntDeque.addLast(cnt);
+                    distance[start][j] = dist;
+                    deque.addLast(new Info(j, dist));
                 }
             }
         }
@@ -40,11 +48,6 @@ public class BOJ1389 {
         path = new boolean[N + 1][N + 1];
         visited = new boolean[N + 1];
         distance = new int[N + 1][N + 1];
-        for (int i = 1; i < N + 1; i++) {
-            for (int j = 1; j < N + 1; j++) {
-                distance[i][j] = Integer.MAX_VALUE;
-            }
-        }
 
         while (M-- > 0) {
             st = new StringTokenizer(br.readLine(), " ");
@@ -58,6 +61,7 @@ public class BOJ1389 {
         int minIndex = -1;
         for (int i = 1; i < N + 1; i++) {
             BFS(i);
+            visited = new boolean[N + 1];
             int sum = 0;
             for (int j = 1; j < N + 1; j++) {
                 if (i == j) {

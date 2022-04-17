@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 public class BOJ10814 {
 
-    public static class Member {
+    static class Member {
         final int age;
         final String name;
 

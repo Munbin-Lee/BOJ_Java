@@ -3,7 +3,7 @@ import java.util.StringTokenizer;
 
 public class BOJ7568 {
 
-    public static class Bulk {
+    static class Bulk {
         public final int weight;
         public final int height;
         public int rank;
