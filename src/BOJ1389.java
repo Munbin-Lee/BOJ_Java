@@ -9,7 +9,7 @@ public class BOJ1389 {
 
     public static boolean[][] path;
     public static boolean[] visited;
-    public static int[][] distance;
+    public static int N;
 
     static class Info {
         public int index;
@@ -21,33 +21,34 @@ public class BOJ1389 {
         }
     }
 
-    public static void BFS(int start) {
+    public static int BFS(int start) {
+        visited = new boolean[N + 1];
         visited[start] = true;
+        int[] distance = new int[N + 1];
         Deque<Info> deque = new LinkedList<>();
         deque.add(new Info(start, 0));
+        int sum = 0;
         while (!deque.isEmpty()) {
             Info temp = deque.removeFirst();
             int i = temp.index;
             int dist = temp.dist;
-            for (int j = 1; j < visited.length; j++) {
+            for (int j = 1; j < N + 1; j++) {
                 if (path[i][j] && !visited[j]) {
-                    dist++;
                     visited[j] = true;
-                    distance[start][j] = dist;
-                    deque.addLast(new Info(j, dist));
+                    sum += dist + 1;
+                    deque.addLast(new Info(j, dist + 1));
                 }
             }
         }
+        return sum;
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        int N = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         path = new boolean[N + 1][N + 1];
-        visited = new boolean[N + 1];
-        distance = new int[N + 1][N + 1];
 
         while (M-- > 0) {
             st = new StringTokenizer(br.readLine(), " ");
@@ -60,15 +61,7 @@ public class BOJ1389 {
         int min = Integer.MAX_VALUE;
         int minIndex = -1;
         for (int i = 1; i < N + 1; i++) {
-            BFS(i);
-            visited = new boolean[N + 1];
-            int sum = 0;
-            for (int j = 1; j < N + 1; j++) {
-                if (i == j) {
-                    continue;
-                }
-                sum += distance[i][j];
-            }
+            int sum = BFS(i);
             if (sum < min) {
                 min = sum;
                 minIndex = i;
