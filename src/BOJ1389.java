@@ -21,7 +21,7 @@ public class BOJ1389 {
         }
     }
 
-    public static int BFS(int start) {
+    public static int bfs(int start) {
         visited = new boolean[N + 1];
         visited[start] = true;
         Deque<Info> deque = new LinkedList<>();
@@ -60,7 +60,7 @@ public class BOJ1389 {
         int min = Integer.MAX_VALUE;
         int minIndex = -1;
         for (int i = 1; i < N + 1; i++) {
-            int sum = BFS(i);
+            int sum = bfs(i);
             if (sum < min) {
                 min = sum;
                 minIndex = i;

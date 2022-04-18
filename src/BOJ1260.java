@@ -10,17 +10,17 @@ public class BOJ1260 {
     public static boolean[][] path;
     public static boolean[] visited;
 
-    public static void DFS(int i) throws IOException {
+    public static void dfs(int i) throws IOException {
         visited[i] = true;
         bw.write(i + " ");
         for (int j = 1; j < N + 1; j++) {
             if (path[i][j] && !visited[j]) {
-                DFS(j);
+                dfs(j);
             }
         }
     }
 
-    public static void BFS(int start) throws IOException {
+    public static void bfs(int start) throws IOException {
         visited[start] = true;
         Deque<Integer> deque = new ArrayDeque<>();
         deque.addLast(start);
@@ -56,11 +56,11 @@ public class BOJ1260 {
             path[num2][num1] = true;
         }
 
-        DFS(V);
+        dfs(V);
         bw.write("\n");
 
         visited = new boolean[N + 1];
-        BFS(V);
+        bfs(V);
 
         bw.flush();
         bw.close();
