@@ -24,7 +24,6 @@ public class BOJ1389 {
     public static int BFS(int start) {
         visited = new boolean[N + 1];
         visited[start] = true;
-        int[] distance = new int[N + 1];
         Deque<Info> deque = new LinkedList<>();
         deque.add(new Info(start, 0));
         int sum = 0;
