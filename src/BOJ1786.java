@@ -21,7 +21,7 @@ public class BOJ1786 {
             }
             if (j == pat.length()) {
                 cnt++;
-                sb.append(i - j).append(1).append(" ");
+                sb.append(i - j + 1).append(" ");
                 j = lps[j - 1];
             }
             else if (i < txt.length() && pat.charAt(j) != txt.charAt(i)) {
