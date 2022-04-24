@@ -2,11 +2,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ1786 {
+public class BOJ1701 {
 
     //https://www.geeksforgeeks.org/java-program-for-kmp-algorithm-for-pattern-searching-2/
-    public static void kmpSearch(String txt, String pat) {
-        StringBuilder sb = new StringBuilder();
+    public static boolean kmpSearch(String txt, String pat) {
         int cnt = 0;
         int[] lps = new int[pat.length()];
         computeLPSArray(pat, pat.length(), lps);
@@ -20,7 +19,9 @@ public class BOJ1786 {
             }
             if (j == pat.length()) {
                 cnt++;
-                sb.append(i - j + 1).append(" ");
+                if (cnt >= 2) {
+                    return true;
+                }
                 j = lps[j - 1];
             }
             else if (i < txt.length() && pat.charAt(j) != txt.charAt(i)) {
@@ -32,8 +33,7 @@ public class BOJ1786 {
                 }
             }
         }
-        System.out.println(cnt);
-        System.out.println(sb);
+        return false;
     }
 
     public static void computeLPSArray(String pat, int M, int[] lps) {
@@ -59,10 +59,21 @@ public class BOJ1786 {
         }
     }
 
+    public static int getLongestLength(String txt) {
+        for (int i = txt.length() - 1; i > 0; i--) {
+            for (int j = 0; i + j <= txt.length(); j++) {
+                String pat = txt.substring(j, i + j);
+                if (kmpSearch(txt, pat)) {
+                    return i;
+                }
+            }
+        }
+        return 0;
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String T = br.readLine();
-        String P = br.readLine();
-        kmpSearch(T, P);
+        String str = br.readLine();
+        System.out.println(getLongestLength(str));
     }
 }

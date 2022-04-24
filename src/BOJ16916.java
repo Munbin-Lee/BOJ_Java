@@ -2,12 +2,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ1786 {
+public class BOJ16916 {
 
     //https://www.geeksforgeeks.org/java-program-for-kmp-algorithm-for-pattern-searching-2/
-    public static void kmpSearch(String txt, String pat) {
-        StringBuilder sb = new StringBuilder();
-        int cnt = 0;
+    public static int kmpSearch(String txt, String pat) {
         int[] lps = new int[pat.length()];
         computeLPSArray(pat, pat.length(), lps);
         int i = 0;
@@ -19,9 +17,7 @@ public class BOJ1786 {
                 j++;
             }
             if (j == pat.length()) {
-                cnt++;
-                sb.append(i - j + 1).append(" ");
-                j = lps[j - 1];
+                return 1;
             }
             else if (i < txt.length() && pat.charAt(j) != txt.charAt(i)) {
                 if (j != 0) {
@@ -32,8 +28,7 @@ public class BOJ1786 {
                 }
             }
         }
-        System.out.println(cnt);
-        System.out.println(sb);
+        return 0;
     }
 
     public static void computeLPSArray(String pat, int M, int[] lps) {
@@ -61,8 +56,8 @@ public class BOJ1786 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String T = br.readLine();
+        String S = br.readLine();
         String P = br.readLine();
-        kmpSearch(T, P);
+        System.out.println(kmpSearch(S, P));
     }
 }
