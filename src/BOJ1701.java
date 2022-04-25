@@ -8,7 +8,7 @@ public class BOJ1701 {
     public static boolean kmpSearch(String txt, String pat) {
         int cnt = 0;
         int[] lps = new int[pat.length()];
-        computeLPSArray(pat, pat.length(), lps);
+        computeLPSArray(pat, lps);
         int i = 0;
         int j = 0;
 
@@ -36,12 +36,11 @@ public class BOJ1701 {
         return false;
     }
 
-    public static void computeLPSArray(String pat, int M, int[] lps) {
-        lps[0] = 0;
+    public static void computeLPSArray(String pat, int[] lps) {
         int len = 0;
         int i = 1;
 
-        while (i < M) {
+        while (i < pat.length()) {
             if (pat.charAt(i) == pat.charAt(len)) {
                 len++;
                 lps[i] = len;
