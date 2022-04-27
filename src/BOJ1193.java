@@ -2,7 +2,7 @@ import java.io.*;
 
 public class BOJ1193 {
 
-    private static int swap3(int num, int ignoredNum) {
+    private static int swap3(int num, @SuppressWarnings("unused") int ignoredNum) {
         return num;
     }
 
