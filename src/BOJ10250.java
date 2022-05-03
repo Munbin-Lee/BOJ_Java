@@ -11,12 +11,11 @@ public class BOJ10250 {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int H = Integer.parseInt(st.nextToken());
             @SuppressWarnings("unused")
-            int W = Integer.parseInt(st.nextToken()); //존재 이유 불명
+            int W = Integer.parseInt(st.nextToken()); //사용X
             int N = Integer.parseInt(st.nextToken());
             int floor = (N % H == 0) ? H : N % H;
             int room = (N - floor) / H + 1;
-            int result = floor * 100 + room;
-            bw.write(result + "\n");
+            bw.write(floor * 100 + room + "\n");
         }
         bw.flush();
         bw.close();
