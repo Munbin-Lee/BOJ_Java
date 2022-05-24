@@ -14,9 +14,9 @@ public class BOJ2581 {
         for (int i = 2; i <= primeMax; i++) {
             primeArr[i] = true;
         }
-        for (int i = 2; (i * i) <= primeMax; i++) {
+        for (int i = 2; i * i <= primeMax; i++) {
             if (primeArr[i]) {
-                for (int j = (i * i); j <= primeMax; j += i) {
+                for (int j = i * i; j <= primeMax; j += i) {
                     primeArr[j] = false;
                 }
             }
