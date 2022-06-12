@@ -10,8 +10,8 @@ public class BOJ17614 {
         int cnt = 0;
 
         for (int i = 1; i <= N; i++) {
-            for (int j = i; j > 0; j /= 10) {
-                int tmp = j % 10;
+            for (int j = i; j > 0; j /= 10) { //j의 각 자리 숫자에 대해
+                int tmp = j % 10; //j의 일의 자리 숫자
                 if (tmp == 3 || tmp == 6 || tmp == 9) {
                     cnt++;
                 }

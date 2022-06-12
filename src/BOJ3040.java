@@ -10,7 +10,7 @@ public class BOJ3040 {
             arr[i] = Integer.parseInt(br.readLine());
         }
 
-        int over = -100;
+        int over = -100; // 100을 얼마나 초과하는지
         for (int i = 0; i < 9; i++) {
             over += arr[i];
         }

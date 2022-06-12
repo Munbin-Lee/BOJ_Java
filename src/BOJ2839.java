@@ -7,8 +7,9 @@ public class BOJ2839 {
     public static int findMin(int num) {
         for (int i = num / 5; i >= 0; i--) {
             int cnt = i;
-            if ((num - i * 5) % 3 == 0) {
-                cnt += (num - i * 5) / 3;
+            int tmp = num - i * 5; //아직 필요한 설탕의 양
+            if (tmp % 3 == 0) {
+                cnt += tmp / 3;
                 return cnt;
             }
         }

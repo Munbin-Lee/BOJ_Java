@@ -5,19 +5,19 @@ public class BOJ1002 {
 
     public static int getNumOfLocations(int x1, int y1, int r1, int x2, int y2, int r2) {
         double distancePow = Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
-        if (x1 == x2 && y1 == y2 && r1 == r2) {
+        if (x1 == x2 && y1 == y2 && r1 == r2) { // 두 원이 겹치는 경우 (교점이 무한)
             return -1;
         }
-        if (distancePow > Math.pow(r1 + r2, 2)) {
+        if (distancePow > Math.pow(r1 + r2, 2)) { // 두 원이 만나지 않음
             return 0;
         }
-        if (distancePow < Math.pow(r2 - r1, 2)) {
+        if (distancePow < Math.pow(r2 - r1, 2)) { // 한 원이 다른 원을 포함
             return 0;
         }
-        if (distancePow == Math.pow(r2 - r1, 2)) {
+        if (distancePow == Math.pow(r2 - r1, 2)) { // 두 원이 외접
             return 1;
         }
-        if (distancePow == Math.pow(r1 + r2, 2)) {
+        if (distancePow == Math.pow(r1 + r2, 2)) { // 두 원이 내접
             return 1;
         }
         return 2;
