@@ -11,7 +11,7 @@ public class BOJ2812 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        final int K = Integer.parseInt(st.nextToken());
         int _K = K;
         String num = br.readLine();
 
