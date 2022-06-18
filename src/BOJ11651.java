@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 
 public class BOJ11651 {
 
-    static class Point {
+    private static class Point {
         public final int x;
         public final int y;
 

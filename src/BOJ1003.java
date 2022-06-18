@@ -2,7 +2,7 @@ import java.io.*;
 
 public class BOJ1003 {
 
-    static class Cnt {
+    private static class Cnt {
         public int zero;
         public int one;
 

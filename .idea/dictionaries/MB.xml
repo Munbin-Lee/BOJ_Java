@@ -2,6 +2,7 @@
   <dictionary name="MB">
     <words>
       <w>arr에</w>
+      <w>bfs로</w>
       <w>deque에</w>
       <w>list에</w>
       <w>nums</w>

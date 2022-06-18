@@ -5,19 +5,19 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
-class Tomato {
-    public int x;
-    public int y;
-    public int z;
-
-    public Tomato(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-}
-
 public class BOJ7569 {
+
+    private static class Tomato {
+        public int x;
+        public int y;
+        public int z;
+
+        public Tomato(int x, int y, int z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -72,10 +72,10 @@ public class BOJ7569 {
             int x = t.x;
             int y = t.y;
             int z = t.z;
-            for (int l = 0; l < 6; l++) {
-                int nx = x + dx[l];
-                int ny = y + dy[l];
-                int nz = z + dz[l];
+            for (int i = 0; i < 6; i++) {
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                int nz = z + dz[i];
                 if (nx < 0 || nx >= M || ny < 0 || ny >= N || nz < 0 || nz >= H) {
                     continue;
                 }

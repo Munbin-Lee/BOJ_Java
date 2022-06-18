@@ -9,7 +9,7 @@ public class BOJ1697 {
 
     public static boolean[] visited;
 
-    static class Info {
+    private static class Info {
         public int index;
         public int cnt;
 

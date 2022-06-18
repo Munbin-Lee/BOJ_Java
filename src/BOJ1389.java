@@ -11,7 +11,7 @@ public class BOJ1389 {
     public static boolean[] visited;
     public static int N;
 
-    static class Info {
+    private static class Info {
         public int index;
         public int dist;
 
