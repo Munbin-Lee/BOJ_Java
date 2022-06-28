@@ -1,10 +1,7 @@
-//다시풀기(미완성)
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class BOJ2667 {
 
@@ -16,11 +13,9 @@ public class BOJ2667 {
     public static int N;
     public static int numOfArea = 0;
     public static int cnt;
-    public static Map<Integer, Integer> areaMap = new HashMap<>();
 
     public static void setArea(int y, int x, int value) {
         area[y][x] = value;
-//        areaMap.put(value, areaMap.get(value) + 1);
         cnt++;
         for (int i = 0; i < 4; i++) {
             int ny = y + dy[i];
@@ -34,6 +29,7 @@ public class BOJ2667 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         N = Integer.parseInt(br.readLine());
         map = new int[N][N]; //y,x
         area = new int[N][N];
@@ -44,23 +40,24 @@ public class BOJ2667 {
             }
         }
 
+        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (map[i][j] == 1 && area[i][j] == 0) {
                     numOfArea++;
-                    cnt=0;
-//                    areaMap.put(numOfArea, 0);
-                    setArea(j, i, numOfArea);
-                    System.out.println(cnt);
+                    cnt = 0;
+                    setArea(i, j, numOfArea);
+                    list.add(cnt);
                 }
             }
         }
-        //오름차순 정렬
-//        List<Map.Entry<Integer, Integer>> areaList = new LinkedList<>(areaMap.entrySet());
-//        areaList.sort(Map.Entry.comparingByValue());
-//        for (Map.Entry<Integer, Integer> i : areaList) {
-//            System.out.println(i.getValue());
-//        }
 
+        bw.write(numOfArea + "\n");
+        Collections.sort(list);
+        for (int i : list) {
+            bw.write(i + "\n");
+        }
+        bw.flush();
+        bw.close();
     }
 }
