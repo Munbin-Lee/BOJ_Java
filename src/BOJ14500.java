@@ -1,5 +1,3 @@
-//미완성(오류)
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,6 +16,7 @@ public class BOJ14500 {
     public static void dfs(int y, int x, int depth, int sum) {
         if (depth == 4) {
             max = Math.max(max, sum);
+            return;
         }
         for (int i = 0; i < 4; i++) {
             int ny = y + dy[i];
@@ -67,7 +66,8 @@ public class BOJ14500 {
                 paper[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        int max = 0;
+
+        max = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 dfs(i, j, 0, 0);
