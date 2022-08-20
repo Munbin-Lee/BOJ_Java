@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Test {
+public class BOJ17413 {
 
     public static StringBuilder reverse(String str) {
         StringBuilder sb = new StringBuilder();
@@ -18,7 +18,16 @@ public class Test {
         StringBuilder sb = new StringBuilder();
         String[] str = br.readLine().split("(?=<.*>)|>(?=.*)");
         for (String s : str) {
-            System.out.println(s);
+            if (s.length() == 0) {
+                continue;
+            }
+            if (s.charAt(0) == '<') {
+                sb.append(s).append('>');
+            }
+            else {
+                sb.append(reverse(s));
+            }
         }
+        System.out.println(sb);
     }
 }

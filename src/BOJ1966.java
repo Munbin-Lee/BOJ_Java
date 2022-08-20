@@ -1,6 +1,3 @@
-//온몸비틀기대환장스파게티코드파티
-//큐 배우고 난 다음 다시풀기
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;

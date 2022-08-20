@@ -1,6 +1,3 @@
-//셀프 넘버가 아닌 수를 구하는 과정에서 엄밀성 부족
-//다시풀기
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
