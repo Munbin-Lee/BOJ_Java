@@ -14,19 +14,13 @@ public class BOJ17413 {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] str = br.readLine().split("(?=<.*>)|>(?=.*)");
         for (String s : str) {
-            if (s.length() == 0) {
-                continue;
-            }
-            if (s.charAt(0) == '<') {
-                sb.append(s).append('>');
-            }
-            else {
-                sb.append(reverse(s));
-            }
+            if (s.length() == 0) continue;
+            if (s.charAt(0) == '<') sb.append(s).append('>');
+            else sb.append(reverse(s));
         }
         System.out.println(sb);
     }
