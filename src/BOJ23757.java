@@ -13,7 +13,7 @@ public class BOJ23757 {
 
     public static int solve() {
         for (int i = 0; i < M; i++) {
-            @SuppressWarnings("ConstantConditions")
+            if (pq.isEmpty()) return 0;
             int cnt = pq.poll() - want[i];
             if (cnt < 0) return 0;
             pq.add(cnt);
