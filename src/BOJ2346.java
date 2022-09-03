@@ -11,17 +11,17 @@ public class BOJ2346 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-        // 1~N 덱
-        ArrayDeque<Integer> deque = new ArrayDeque<>();
-        for (int i = 1; i <= N; i++) {
-            deque.addLast(i);
-        }
-
         // 풍선 안의 숫자
         int[] arr = new int[N + 1];
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         for (int i = 1; i <= N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        // 1~N 덱
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        for (int i = 1; i <= N; i++) {
+            deque.addLast(i);
         }
 
         // N명 제거

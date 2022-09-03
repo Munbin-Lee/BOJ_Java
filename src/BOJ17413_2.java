@@ -13,6 +13,7 @@ public class BOJ17413_2 {
         ArrayDeque<Character> deque = new ArrayDeque<>();
 
         for (int i = 0; i < str.length(); i++) {
+
             // 태그는 끝날 때까지 그대로 출력
             if (tag) {
                 while (str.charAt(i) != '>') {
@@ -22,22 +23,28 @@ public class BOJ17413_2 {
                 sb.append('>');
                 tag = false;
             }
+
             // 태그 시작
             else if (str.charAt(i) == '<') {
+
                 // 거꾸로 출력
                 while (!deque.isEmpty()) {
                     sb.append(deque.removeLast());
                 }
+
                 sb.append('<');
                 tag = true;
             }
             else if (str.charAt(i) == ' ') {
+
                 // 거꾸로 출력
                 while (!deque.isEmpty()) {
                     sb.append(deque.removeLast());
                 }
+
                 sb.append(' ');
             }
+
             // 태그가 아닌 문자는 deque에 저장
             else deque.addLast(str.charAt(i));
         }

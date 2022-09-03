@@ -4,21 +4,17 @@ import java.io.InputStreamReader;
 
 public class Test {
 
-    public static StringBuilder reverse(String str) {
-        StringBuilder sb = new StringBuilder();
-        for (String s : str.split(" ")) {
-            sb.append(new StringBuilder(s).reverse()).append(' ');
+    public static String stream(int n) {
+        StringBuilder s = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            s.append(i);
         }
-        sb.delete(sb.length() - 1, sb.length());
-        return sb;
+        return s.toString();
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        String[] str = br.readLine().split("(?=<.*>)|>(?=.*)");
-        for (String s : str) {
-            System.out.println(s);
-        }
+        int N = Integer.parseInt(br.readLine());
+        System.out.println(stream(N));
     }
 }
